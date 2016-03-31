@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Nouvelle demande</h2>
+
+    {{ form_start(form, {attr:{"novalidate":"novalidate"}}) }}
+
+        {{ form_widget(form) }}
+
+        <div class="form-group">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10">
+                <input class="btn btn-primary" type="submit" value="Envoyer" />
+            </div>
+        </div>
+
+    {{ form_end(form) }}
+{% endblock %}
+
+{% block title %}
+    Nouvelle demande
+{% endblock %}
+{% block javascripts %}
+    <script>
+        var getCitiesUrl = '{{ url('get_cities') }}';
+    </script>
+    <script src="{{ asset('js/application.js') }}"></script>
+{% endblock %}
