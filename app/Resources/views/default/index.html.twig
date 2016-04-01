@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Nouvelle demande</h2>
+    <h1>{% trans %}nouvelle.demande{% endtrans %}</h2>
 
     {{ form_start(form, {attr:{"novalidate":"novalidate"}}) }}
 

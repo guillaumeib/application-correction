@@ -23,7 +23,9 @@ class ApplicationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('userNumber')
+            ->add('userNumber', null, array(
+                "label" => "label.user.number"
+            ))
             ->add('birthdate', DateType::class, array(
                 'widget' => 'text',
                 'format' => 'dd-MM-yyyy',
@@ -91,7 +93,6 @@ class ApplicationType extends AbstractType
     {
         $resolver->setDefaults(array(
             'data_class' => 'AppBundle\Entity\Application',
-            'cascade_validation' => true,
             'cities' => null
         ));
     }

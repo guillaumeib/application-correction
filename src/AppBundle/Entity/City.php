@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * City
@@ -48,11 +49,11 @@ class City implements \JsonSerializable
     private $applications;
 
     /**
-     * @ORM\Callback()
+     * @Assert\Callback()
      */
     public function checkEmailIfReceivedNews()
     {
-        
+
     }
 
     /**

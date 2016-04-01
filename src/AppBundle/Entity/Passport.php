@@ -35,6 +35,7 @@ class Passport
     private $application;
 
     /**
+     * @Assert\NotBlank()
      * @Assert\File(
      *     maxSize = "6000k",
      *     mimeTypes = {"application/pdf", "application/x-pdf", "image/png", "image/jpg"},
